@@ -11,4 +11,4 @@ COPY ["*.bin", "./"]
 
 EXPOSE 9696
 
-ENTRYPOINT ["gunicorn", "--bind=0.0.0.0", "q6-docker_predict:app"]
+ENTRYPOINT ["gunicorn", "--bind=0.0.0.0:9696", "q6-docker_predict:app"]
